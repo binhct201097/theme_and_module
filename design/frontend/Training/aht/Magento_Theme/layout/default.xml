@@ -1,0 +1,33 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_src" xsi:type="string">images/my_logo.png</argument>
+                <argument name="logo_width" xsi:type="number">50</argument>
+                <argument name="logo_height" xsi:type="number">50</argument>
+                <argument name="logo_alt" xsi:type="string">Logo name</argument>
+            </arguments>
+        </referenceBlock>
+
+         <referenceBlock name="top.links">
+            <referenceBlock name="my-account-link" remove="true" />
+            <referenceBlock name="register-link" remove="true" />
+            <referenceBlock name="header" remove="true" />
+        </referenceBlock>
+
+        <referenceBlock name="header.links">
+            <referenceBlock name="authorization-link-login" remove="true" />
+        </referenceBlock>
+    
+
+
+        <!-- <referenceContainer name="footer">
+            <container name="socialtests" htmlTag="div" after="copyright">
+                <block class="Magento\Framework\View\Element\Template" name="social.links" template="Magento_Theme::social-links.phtml" before="-"/>
+            </container>
+        </referenceContainer> -->
+
+        
+        
+    </body>
+</page>

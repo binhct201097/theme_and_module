@@ -1,0 +1,18 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_src" xsi:type="string">images/my_logo.jpg</argument>
+                <argument name="logo_width" xsi:type="number">70</argument>
+                <argument name="logo_height" xsi:type="number">70</argument>
+                <argument name="logo_alt" xsi:type="string">Logo name</argument>
+            </arguments>
+        </referenceBlock>
+        <!-- <container name="franco" htmlTag="div">
+            <block class="Magento\Framework\View\Element\Template" name="franco_block" template="Magento_Theme::franco.phtml" before="-"/>
+        </container> -->
+        <!-- <referenceBlock name="after.body.start" remove="true"/> -->
+        <!-- <referenceBlock name="top.links" remove="true"/>
+        <referenceBlock name="main.content" remove="true"/> -->
+    </body>
+</page>

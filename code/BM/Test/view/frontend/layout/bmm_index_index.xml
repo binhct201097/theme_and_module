@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <referenceContainer name="content">
+        <block class="BM\Test\Block\Index" name="blog_index" template="BM_Test::index.phtml">
+            <arguments>
+                <argument name="css_class" xsi:type="string">header links</argument>
+            </arguments>
+            <block class="BM\Test\Block\Test" name="blog_indexx" template="BM_Test::test.phtml"/>
+        </block>
+    </referenceContainer>
+</page>
