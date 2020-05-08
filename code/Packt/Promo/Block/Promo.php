@@ -9,16 +9,27 @@ class Promo extends \Magento\Framework\View\Element\Template
     protected $context;
     protected $_categoryFactory;
     protected $storeManager;
+    protected $_postFactory;
     public function __construct(
         \Magento\Backend\Block\Template\Context $context,
         \Magento\Catalog\Model\CategoryFactory $categoryFactory,
         \Magento\Store\Model\StoreManagerInterface $storeManager,
+        \Packt\Promo\Model\PostFactory $postFactory,
         array $data = []
     ) {
         $this->_storeManager = $storeManager;
         $this->_categoryFactory = $categoryFactory;
+        $this->_postFactory = $postFactory;
         parent::__construct($context, $data);
     }
+
+    public function getImage()
+    {
+        $post = $this->_postFactory->create();
+        $collection = $post->getCollection()->addFieldToFilter('type_id', ['like' => '%downloadable%']);
+        return $collection;
+    }
+
     public function getCategory($categoryId)
     {
         $category = $this->_categoryFactory->create();

@@ -4,6 +4,7 @@
  *
  * @var $block PacktPromoBlockPromo
  */
+$getimg = $block->getImage();
 $productCollection = $block->getCategoryProducts(8);
 $mediaUrl = $block->getProductUrlImage();
 ?>
@@ -13,8 +14,11 @@ $mediaUrl = $block->getProductUrlImage();
 <div class="jcarousel">
 <ul>
     <?php
-foreach ($productCollection as $product) {
-    echo '<li><img src="' . $mediaUrl . $product->getData()['small_image'] . '" alt="Image 1"></li>';
+// foreach ($productCollection as $product) {
+//     echo '<li><img src="' . $mediaUrl . $product->getData()['small_image'] . '" alt="Image 1"></li>';
+// }
+foreach ($getimg as $productimg) {
+    echo '<li><img src="' . $mediaUrl . $productimg->getData()['small_image'] . '" alt="Image 1"></li>';
 }
 ?>
 </ul>
@@ -28,7 +32,6 @@ foreach ($productCollection as $product) {
 <div data-mage-init='{"hello": {"message": "HELLO WORLD!"}}'>
 </div>
 <script>
-
 requirejs(['promo'], function(promo){
 promo.promoBlock('.jcarousel', '.jcarousel-control-prev', '.jcarousel-control-next', '.jcarousel-pagination');
 });
