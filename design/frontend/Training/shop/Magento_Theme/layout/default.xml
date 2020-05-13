@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<page layout="2columns-left"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_src" xsi:type="string">images/my_logo.jpg</argument>
+                <argument name="logo_width" xsi:type="number">230</argument>
+                <argument name="logo_height" xsi:type="number">80</argument>
+                <argument name="logo_alt" xsi:type="string">Logo name</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceBlock name="top.search" remove="true"/>
+
+        <referenceBlock name="top.links">
+            <referenceBlock name="register-link" remove="true"/>
+            <referenceBlock name="authorization-link-login" remove="true" />
+            <!-- <referenceBlock name="header" remove="true"/> -->
+        </referenceBlock>
+    </body>
+</page>
