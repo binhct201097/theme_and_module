@@ -12,7 +12,7 @@ define([
                 var carousel = $(this),
                     width = carousel.innerWidth();
                 if (width >= 600) {
-                    width = width / 3;
+                    width = width / 5;
                 } else if (width >= 350) {
                     width = width / 2;
                 }

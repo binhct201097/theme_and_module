@@ -2,10 +2,10 @@
 /**
  * Promo view template
  *
- * @var $block PacktPromoBlockPromo
+ * @var $block \Packt\Promo\Block\Promo
  */
 $getimg = $block->getImage();
-$productCollection = $block->getCategoryProducts(8);
+// $productCollection = $block->getCategoryProducts(8);
 $mediaUrl = $block->getProductUrlImage();
 ?>
 <h1 style="text-align:center;"><?php echo $block->getTitle(); ?></h1>
@@ -13,7 +13,7 @@ $mediaUrl = $block->getProductUrlImage();
 <div class="jcarousel-wrapper">
 <div class="jcarousel">
 <ul>
-    <?php
+<?php
 // foreach ($productCollection as $product) {
 //     echo '<li><img src="' . $mediaUrl . $product->getData()['small_image'] . '" alt="Image 1"></li>';
 // }

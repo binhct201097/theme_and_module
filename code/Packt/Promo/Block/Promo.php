@@ -1,10 +1,12 @@
 <?php
 namespace Packt\Promo\Block;
 
+use Magento\Widget\Block\BlockInterface;
+
 /**
  * Promo block
  */
-class Promo extends \Magento\Framework\View\Element\Template
+class Promo extends \Magento\Framework\View\Element\Template implements \Magento\Widget\Block\BlockInterface
 {
     protected $context;
     protected $_categoryFactory;

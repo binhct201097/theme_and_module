@@ -1,7 +1,0 @@
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
-    <head>
-        <link src="Magento_Theme::favicon-32×32.png" type="image/x-icon" rel="icon" sizes="32×32" />
-        <remove src="css/_theme.css" />
-        <css src="css/_theme.css" />
-    </head>
-</page>
