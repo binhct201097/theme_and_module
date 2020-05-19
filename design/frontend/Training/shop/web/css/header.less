@@ -1,14 +1,82 @@
+a:hover{
+	text-decoration: none;
+}
 .page-wrapper{
 	.page-header{
+		border-bottom: 1px solid #d4caca;
+		height: 250px;
+		.promo{
+			text-align: center;
+			color: #ff6633;
+			background: url('../images/bg_header.jpg') no-repeat center top;
+			height: 60px;
+			line-height: 60px;
+			font-size: 18px;
+			text-transform: uppercase;
+		}
 		.panel.wrapper{
-			background:transparent url('../images/bg_header.jpg') no-repeat center top;
-			border-bottom:none;
-			background-color: yellow;
+			background-color: white;
+			color: black;
+			border-bottom: 0px;
 		}
 		.panel.header{
-			padding-top:0;
-			padding-bottom:0;
-            text-align:center;
-        }
-    }
+			p{
+				color: #747474;
+				span{
+					color: red;
+				}
+			}
+		}
+		.switcher {
+			margin-right: 0px;
+			strong{
+				display: contents;
+			}
+		}
+		.header.content{
+			display: flex;
+			>li.greet.welcome {
+				list-style: none;
+				margin-top: 35px;
+				margin-right: 25px;
+			}
+			.logo {
+				float: left;
+				max-width: 50%;
+				z-index: 5;
+				top:5px;
+				position: relative;
+				left: ~"calc(50% - 190px)";
+				transform: translateX(-50%);
+			}
+			p.phone-icon{
+				display: flex;
+				margin-top: 35px;
+				span.phone{
+					margin-left: 8px;
+    				color: #747474;
+				}
+			}
+		}
+	}
+	.sections.nav-sections{
+		.block.block-search.ui-menu-item {
+			margin-top: 5px;
+			margin-right: 15px;
+		}
+	}
+	strong.view-en span {
+    	display: none;
+	}
+	strong.language-USD span {
+    	display: none;
+	}
+	.customer-welcome .action.switch > span {
+    	color: black;
+		display: contents;
+	}
+	.customer-welcome .action.switch:after {
+    	color: black;
+	}
+
 }

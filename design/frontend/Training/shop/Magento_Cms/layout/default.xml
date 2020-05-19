@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="header.container">
+            <block class="Magento\Cms\Block\Block" name="header_promo_top" before="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">header_promo_top</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <referenceContainer name="content">
+            <block class="Packt\Promo\Block\Promo" name="promo_index" template="Packt_Promo::promo.phtml"/>
+        </referenceContainer>
+
+        <referenceContainer name="content">
+            <block class="Magento\Cms\Block\Block" name="bag">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">bag</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Cms\Block\Block" name="trend" after="bag">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">trend</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <referenceContainer name="content">
+            <block class="Magento\Cms\Block\Block" name="trend">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">trend</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <referenceContainer name="content">
+            <block class="Magento\Cms\Block\Block" name="new">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">new</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <referenceContainer name="page.wrapper">
+            <referenceBlock name="copyright" remove="true"/>
+        </referenceContainer>
+    </body>
+</page>
