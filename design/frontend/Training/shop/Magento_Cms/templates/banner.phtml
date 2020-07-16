@@ -1,0 +1,23 @@
+<?php echo $this->getLayout()
+    ->createBlock('Magento\Cms\Block\Block')
+    ->setBlockId('carousel')
+    ->toHtml();
+?>
+<script>
+	require(['jquery','owlCarousel'], function ($) {
+		var $owl = $('.banner_first').owlCarousel({
+            loop: true,
+            nav:true,
+			// autoplay:true,
+			responsive:{
+				0:{
+					items:1
+				},
+				768:{
+					items:1
+				}
+			}
+		})
+    });
+    $owl.trigger('refresh.owl.carousel');
+</script>

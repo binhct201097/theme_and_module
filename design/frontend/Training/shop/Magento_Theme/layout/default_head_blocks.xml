@@ -4,6 +4,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <css src="css/header.css" />
         <css src="css/bootstrap.css"/>
-        <css src="Packt_Promo::css/jcarousel.responsive.css"/>
+        <css src="css/fontawesome.css"/>
+        <css src="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" src_type="url" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/1a6d2f8498.js" src_type="url"/>
+        <css src="https://use.fontawesome.com/releases/v5.7.1/css/all.css" src_type="url"/>
+        <css src="css/owl.carousel.min.css" />
+        <css src="css/owl.theme.default.min.css" />
     </head>
 </page>

@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
+        <!-- for header -->
         <referenceContainer name="header.container">
             <block class="Magento\Cms\Block\Block" name="header_promo_top" before="-">
                 <arguments>
@@ -9,41 +10,64 @@
             </block>
         </referenceContainer>
 
-        <referenceContainer name="content">
-            <block class="Packt\Promo\Block\Promo" name="promo_index" template="Packt_Promo::promo.phtml"/>
-        </referenceContainer>
-
-        <referenceContainer name="content">
-            <block class="Magento\Cms\Block\Block" name="bag">
+        <referenceContainer name="header-wrapper">
+            <block class="Magento\Cms\Block\Block" name="content-mobile" before="-">
                 <arguments>
-                    <argument name="block_id" xsi:type="string">bag</argument>
-                </arguments>
-            </block>
-            <block class="Magento\Cms\Block\Block" name="trend" after="bag">
-                <arguments>
-                    <argument name="block_id" xsi:type="string">trend</argument>
+                    <argument name="block_id" xsi:type="string">content-mobile</argument>
                 </arguments>
             </block>
         </referenceContainer>
 
-        <referenceContainer name="content">
-            <block class="Magento\Cms\Block\Block" name="trend">
+        <referenceContainer name="header.panel">
+            <block class="Magento\Cms\Block\Block" name="help-lable">
                 <arguments>
-                    <argument name="block_id" xsi:type="string">trend</argument>
+                    <argument name="block_id" xsi:type="string">help-lable</argument>
                 </arguments>
             </block>
         </referenceContainer>
 
-        <referenceContainer name="content">
-            <block class="Magento\Cms\Block\Block" name="new">
-                <arguments>
-                    <argument name="block_id" xsi:type="string">new</argument>
-                </arguments>
-            </block>
-        </referenceContainer>
+        <!-- for footer -->
 
-        <referenceContainer name="page.wrapper">
-            <referenceBlock name="copyright" remove="true"/>
+        <referenceContainer name="footer" htmlClass="footer content">
+            <container name="div.row.of.footer" htmlTag="div" htmlClass="row">
+                <block class="Magento\Cms\Block\Block" name="address">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">address</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Cms\Block\Block" name="tags">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">tags</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Cms\Block\Block" name="guarantee">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">guarantee</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Cms\Block\Block" name="follow">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">follow</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Cms\Block\Block" name="menu-footer">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">menu-footer</argument>
+                    </arguments>
+                </block>
+            </container>
+            <container name="div.footer.bottom" htmlTag="div" htmlClass="text-center">
+                <block class="Magento\Cms\Block\Block" name="copy">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">copy</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Cms\Block\Block" name="payment">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">payment</argument>
+                    </arguments>
+                </block>
+            </container>
         </referenceContainer>
     </body>
 </page>

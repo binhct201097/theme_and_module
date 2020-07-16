@@ -1,32 +1,27 @@
 <?xml version="1.0"?>
-<page layout="1column"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-        <referenceBlock name="logo">
-            <arguments>
-                <argument name="logo_src" xsi:type="string">images/logo.jpg</argument>
-                <argument name="logo_width" xsi:type="number">230</argument>
-                <argument name="logo_height" xsi:type="number">80</argument>
-                <argument name="logo_alt" xsi:type="string">Logo name</argument>
-            </arguments>
-        </referenceBlock>
+        <!-- catalog_product_view.xml -->
+        <!-- <referenceBlock name="reviews.tab" remove="true" /> -->
+        <!-- <referenceBlock name="product.info.review" remove="true"/> -->
 
-        <!-- move -->
-        <move element="top.search" destination="catalog.topnav" after="-" />
+
+        <move element="top.search" destination="div.menu.search" after="-" />
+        <move element="form.subscribe" destination="follow" after="-"/>
+        <move element="navigation.sections" destination="div.menu.search" />
         <move element="header" destination="header-wrapper" before="minicart"/>
 
-        <referenceContainer name="header-wrapper">
-            <block class="Magento\Cms\Block\Block" name="content-mobile" before="-">
-                <arguments>
-                    <argument name="block_id" xsi:type="string">content-mobile</argument>
-                </arguments>
-            </block>
-        </referenceContainer>
+        <referenceBlock name="footer_links" remove="true" />
+        <referenceBlock name="header" remove="true" />
+        <referenceBlock name="copyright" remove="true"/>
 
-        <referenceContainer name="header.panel">
-            <block class="Magento\Cms\Block\Block" name="help-lable">
+        <referenceContainer name="page.top">
+            <container name="div.menu.search" htmlTag="div" htmlClass="menu-search d-flex justify-content-between m-3" after="-" />
+        </referenceContainer>
+        <referenceContainer name="div.menu.search">
+            <block class="Magento\Cms\Block\Block" name="nav">
                 <arguments>
-                    <argument name="block_id" xsi:type="string">help-lable</argument>
+                    <argument name="block_id" xsi:type="string">nav</argument>
                 </arguments>
             </block>
         </referenceContainer>

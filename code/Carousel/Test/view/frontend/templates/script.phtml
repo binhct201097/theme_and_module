@@ -1,0 +1,12 @@
+<?php echo $this->getLayout()
+    ->createBlock('Magento\Cms\Block\Block')
+    ->setBlockId('carousel')
+    ->toHtml();
+?>
+
+<script type="text/x-magento-init">{
+    "*" :{
+        "Carousel_Test/js/owlcarousel": {}
+    }
+}
+</script>
